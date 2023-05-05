@@ -1,0 +1,134 @@
+body {
+  background-color: aqua;
+  margin: 0px;
+}
+
+.navigatie {
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0px;
+  padding-right: 50px;
+  position: relative;
+}
+
+h1 {
+  color: aqua;
+  width: 50%;
+  text-align: center;
+}
+
+.nav a {
+  color: aqua;
+  text-decoration: none;
+}
+
+nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+a:hover {
+  color: white;
+}
+
+.img-slide {
+  position: relative;
+  width: 100%;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+  background-color: black;
+}
+
+.img-slide:hover .overlay {
+  opacity: 1;
+}
+
+.slide {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+@keyframes img1 {
+  0% {
+    opacity: 0;
+  }
+  33% {
+    opacity: 1;
+  }
+}
+
+@keyframes img2 {
+  33% {
+    opacity: 0;
+  }
+  66% {
+    opacity: 1;
+  }
+}
+
+@keyframes img3 {
+  66% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#img1 {
+  animation-name: img1;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#img2 {
+  animation-name: img2;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#img3 {
+  animation-name: img3;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.footer{
+  background-color: black;
+  color: aliceblue;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;;
+}
+
